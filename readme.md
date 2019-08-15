@@ -1,3 +1,4 @@
+## Git Shortcuts
 ```bash
 alias atwiki="cd ~/dev/go/src/bitbucket.org/atfreaks/v3-top.atwiki.jp"
 alias gs="git status"
@@ -15,5 +16,20 @@ gpo() {
 grebase () {
   num=$1
   git rebase -i HEAD~$num
+}
+```
+
+## Docker Shortcuts
+[MyDucker](https://github.com/vindecodex/dockertips)
+```bash
+#mycustomDockerShortCuts
+alias dbuild="docker-compose build"
+alias drmserv="docker-compose rm -f -s -v $1"
+alias dupserv="docker-compose -f docker-compose.yml up $1"
+dockerup () {
+  num=$1
+  dbuild
+  drmserv $1
+  dupserv $1
 }
 ```
