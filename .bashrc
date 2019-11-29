@@ -16,3 +16,21 @@ grebase () {
   git rebase -i HEAD~$num
 }
 ```
+#passing an output to a variable by wrapping your command with (`)
+variable = `echo Welcome` #this will contain Welcome
+
+function sayHello {
+  name = $1
+  echo Hello World by $name
+}
+
+#running by this line
+#sayHello vindecodex
+
+#output
+#Hello World by vindecodex
+
+sayHello() {
+  name = $1
+  echo Hello World by $name
+}
