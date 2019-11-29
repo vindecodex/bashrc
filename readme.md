@@ -35,5 +35,6 @@ dockerup () {
 ```
 
 ## Creating a copy paste data with variable
-alias anyname="sed -n 's/^variable=//p' /.file | pbcopy"
-alias anyname1="sed -n 's/^variable1=//p' /.file1 | pbcopy"
+`alias anyname="sed -n 's/^variable=//p' /.file | pbcopy"`
+
+`alias anyname1="sed -n 's/^variable1=//p' /.file1 | pbcopy"`
