@@ -38,3 +38,12 @@ dockerup () {
 `alias anyname="sed -n 's/^variable=//p' /.file | pbcopy"`
 
 `alias anyname1="sed -n 's/^variable1=//p' /.file1 | pbcopy"`
+
+
+### For New Device
+- if you are using bash then create `.bashrc` on ~/
+- if you are using zsh then create `.zshrc` on ~/
+
+### Creating alias separate file
+- Inside `.bashrc` or `.zshrc`
+- source the alias file by `source ~/.your-alias` - this code must be inside `.bashrc` or `.zshrc`
