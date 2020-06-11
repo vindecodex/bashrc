@@ -13,6 +13,14 @@ alias gc="git commit -m $1"
 alias gl="git log"
 alias gb="git checkout -b $1"
 alias gco="git checkout $1"
+alias gwho="git config --global user.email"
+alias gorigin="git config remote.origin.url"
+
+gsetorigin() {
+	host=$1
+	repo=$2
+	echo "git remote set-url origin git@github.com$host:$repo"
+}
 gpo() {
   branch=`git branch | grep \* | cut -d ' ' -f2`
   git push origin $branch $1
