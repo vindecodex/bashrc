@@ -17,9 +17,14 @@ alias gwho="git config --global user.email"
 alias gorigin="git config remote.origin.url"
 
 gsetorigin() {
-	host=$1
-	repo=$2
-	echo "git remote set-url origin git@github.com$host:$repo"
+	input1=$1
+	input2=$2
+	if [ -z "$input2" ]
+	then
+		git remote set-url origin git@github.com:$input1
+	else
+		git remote set-url origin git@github.com-$input1:$input2
+	fi	
 }
 gpo() {
   branch=`git branch | grep \* | cut -d ' ' -f2`
